@@ -1,0 +1,27 @@
+{
+  "name": "newsletter-signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdl126/NewsLetter-Signup.git"
+  },
+  "author": "Bruno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bdl126/NewsLetter-Signup/issues"
+  },
+  "homepage": "https://github.com/bdl126/NewsLetter-Signup#readme",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.74",
+    "@mailchimp/mailchimp_transactional": "^1.0.47",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mailchimp": "^1.2.1",
+    "request": "^2.88.2"
+  }
+}
