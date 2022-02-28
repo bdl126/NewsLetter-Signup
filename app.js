@@ -7,6 +7,9 @@ const httpsSucess = 200
 
 const app = express()
 
+var mailchim_key = process.env.MAILCHIMP_KEY
+var listId = process.env.LIST_ID
+
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"))
 
@@ -32,10 +35,10 @@ app.post("/", function(req,res){
   };
   const jsonData= JSON.stringify(data)
 
-  const url = "https://us14.api.mailchimp.com/3.0/lists/5cd8524216"
+  const url = "https://" + mailchim_key.split("-")[1] +".api.mailchimp.com/3.0/lists/" + listId
   const options = {
     method:"POST",
-    auth: "bru:decad4a3274cb975e06750da929c06a5-us14"
+    auth: "bru:" + mailchim_key
 
   }
 
@@ -64,10 +67,3 @@ app.post("/failure", function(req,res){
 app.listen(process.env.PORT || 3000, function() {
   console.log("listenning on port 3000")
 })
-
-
-// api key
-// 127f6ee223591cbb103f30b3135c7434-us14
-
-//list id
-// 5cd8524216
