@@ -52,7 +52,7 @@ app.post("/", function(req,res){
   })
 
   console.log(typeof request);
-  // request.write(jsonData)
+  request.write(jsonData)
   request.end();
 })
 
